@@ -7,6 +7,12 @@
 <meta name="theme-color" content="#f5f3fa" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#15131b" media="(prefers-color-scheme: dark)">
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEBElEQVR4AbRWe2wURRj/zezeI7Q8RJBSFEkQUUrRtmJKjcRDbUFqUOBqUhuKgPwh1oS0REK0SRuFaC+iiURBBGPQVKCaWuWlKT5izkjxGislPBrKI+VRSgq0zV27u8PMLHfpHzS7t0sv983ufTO/x31z891SDHq99PjmMcGsUFUwu+ZgMKvmclF2iN2NEFxByRmqEhqDJJEwsDQrtMBLtGOEoJKA5BNC7hu80M294DI5USk0hFacTxooyg4VUIJ9ICQ9PjFsV64htOImaHHmpnsYsHPYBIcgpmDbgzM+Gkv7PWopASYOsW740rwSzK8v49UguW5VUkf7MXnauKRpCEgu9Xn9T/t8fvgsYvGKOXh9Qz6mPpqO+a/kYNSYkfBxzJOB6fiycQ1qakux8esSTHpwPHw8byu4NjUMPV3XdVjF7HkP4bklmbg3LRWzcidD9RCJKXt/vvzmP+06ishfZ7ByQ0DmrfjEvNCmmjYAO8GYIYUEkDGWwJw92WnmNR2/NbRg2syJ0A0tMW/FLY+hZHA4hCrqsaVyP/ZsCyPv+em4fq0PzODnyiafawPdV3vxz+FTWPn2syh+ay5+/qbJprS5jKakpMJOKFSRCL/fD0VRMGJEisTlL83Bpw2rMS5tNKpW1eGPhlMyb4dTrKG9vT2wE7qhSwPRaFT+yPr6ejHrqUkoLsvD5vU/4r03dqM10m6La7Ce4y2gvIMsW/sMdoYacezIeWnOyeDYQF7BI7wSBv7c1+pEN4GhHq8XHq91EGJ6VVUVlFIsXjUH4uwrigcerzXe473zGpM14cf+DeFLCQgf3b3pQH8/7AS73Yg0TYNhGKjbHsbCkmy+DQO28ENpOK5A+JcTvB0rmLtwhqsSODagawa2Vh/E8vJ5yJj9gGMTrhrRyeZO1G4Jo/zDRVj/yRLcP2VCUk3IdSMSDeXA7iasKdyGttaLeGfry3g4a3xSzcjxFsRrPjUjDYFFM9FY34JdH/8O0Zzic3aurg28Wb0ApeUBFL76BI5HLvDnhVEgvEvaERdrqKp6YCcIMb2KPyJCSAIzdsJIwcOPJkPgxUyc/v8iFKrCDqdYQxWFdimKAqs40ngav9a1oOtSD/77+xy0ASYxH5TVo6c7isKSHDyWNwU7Nh2WeSs+c5520Vgs1hSLRWEV3+8I44uNh9B2vAMHvjuKG903JaY1charCz5DRdFXePe1b3GhvVPmrfjM+VgTBWPNsoYuBtETzrd1Jc/AtSll6uf8Ea87ebQ7hNAU2rS2eW07CFvhji55NGNsudCmArrn33U/8OfIF/h2dIjPwxqMdQitvc3r6oWONCBu9kYq9vczNYOXppqBHeIOr4i82xB4wWVyolpoCC2RF3ELAAD//593zDoAAAAGSURBVAMA204BsgFHFt0AAAAASUVORK5CYII=">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Viola">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <style>
 :root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
 html { -webkit-text-size-adjust: 100%; }
@@ -2225,6 +2231,9 @@ svg { display: block; }
   if (location.hash === '#aula') { try { location.hash = 'trilha'; } catch (e) {} }
   renderHome();
 })();
+</script>
+<script>
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
 </script>
 </body>
 </html>

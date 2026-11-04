@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "Primeiros Passos na Viola",
+  "short_name": "Viola",
+  "description": "Aplicativo guiado de iniciação à viola de arco, com afinador, aulas do arco e avaliação pelo microfone.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f5f3fa",
+  "theme_color": "#f5f3fa",
+  "categories": ["education", "music"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
